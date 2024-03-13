@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 선택자</title>
+    <style>
+        h1 {
+            font-size: 2.5rem;
+            color: #25a9bd;
+        }
+        section {
+            align-self: 10px;
+            border: 5px solid orange;
+        }
+
+        /* : first-of-type
+            - 첫 요소를 선택 */
+        section:first-of-type {color: #cc2222;}
+
+        /* : last-of-type  - 마지막 요소를 선택 */
+        /* :: first-letter - 첫 글자를 선택 */
+        section:last-of-type::first-letter {
+            font-size: 2.4em;
+            float: left;
+            padding: 0 2px;
+            margin: -1px 3px 0 0;
+            font-weight: bold;
+            color: orange;
+        }
+        section em {
+            display: block;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            font-style: normal;
+            font-weight: normal;
+        }
+        /* :before - 요소가 시작되기 전을 선택 */
+        section em::before {
+            content: "\"";
+            padding-right: 0.5em;
+            color: red;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        /* :after - 요소가 끝난 다음을 선택 */
+        section em::after {
+            content: "\"";
+            padding-right: 0.5em;
+            color: red;
+            font-weight: bold;
+        }
+        /* :enabled - 활성화된 태그를 선택 */
+        input:enabled {background-color: aqua;}
+        /* :disabled - 비활성화된 태그를 선택 */
+         input:disabled {background-color: gray;}
+         input::placeholder {color: white;}
+        
+    </style>
+</head>
+<body>
+    <h1>가상 선택자</h1>
+    <section>
+        예비비는 총액으로 국회의 의결을 얻어야 한다. 예비비의 지출은 차기국회의 승인을 얻어야 한다. 국회에 제출된 법률안 기타의 의안은 회기중에 의결되지 못한 이유로 폐기되지 아니한다. 다만, 국회의원의 임기가 만료된 때에는 그러하지 아니하다. 국가는 건전한 소비행위를 계도하고 생산품의 품질향상을 촉구하기 위한 소비자보호운동을 법률이 정하는 바에 의하여 보장한다.
+원장은 국회의 동의를 얻어 대통령이 임명하고, 그 임기는 4년으로 하며, 1차에 한하여 중임할 수 있다. 대법원은 법률에 저촉되지 아니하는 범위안에서 소송에 관한 절차, 법원의 내부규율과 사무처리에 관한 규칙을 제정할 수 있다. 한 회계연도를 넘어 계속하여 지출할 필요가 있을 때에는 정부는 연한을 정하여 계속비로서 국회의 의결을 얻어야 한다.
+    </section>
+    <section>
+        <em>아는 것이 힘이다 </em>
+        예비비는 총액으로 국회의 의결을 얻어야 한다. 예비비의 지출은 차기국회의 승인을 얻어야 한다. 국회에 제출된 법률안 기타의 의안은 회기중에 의결되지 못한 이유로 폐기되지 아니한다. 다만, 국회의원의 임기가 만료된 때에는 그러하지 아니하다. 국가는 건전한 소비행위를 계도하고 생산품의 품질향상을 촉구하기 위한 소비자보호운동을 법률이 정하는 바에 의하여 보장한다.
+        원장은 국회의 동의를 얻어 대통령이 임명하고, 그 임기는 4년으로 하며, 1차에 한하여 중임할 수 있다. 대법원은 법률에 저촉되지 아니하는 범위안에서 소송에 관한 절차, 법원의 내부규율과 사무처리에 관한 규칙을 제정할 수 있다. 한 회계연도를 넘어 계속하여 지출할 필요가 있을 때에는 정부는 연한을 정하여 계속비로서 국회의 의결을 얻어야 한다.
+    </section>
+    <section>
+        예비비는 총액으로 국회의 의결을 얻어야 한다. 예비비의 지출은 차기국회의 승인을 얻어야 한다. 국회에 제출된 법률안 기타의 의안은 회기중에 의결되지 못한 이유로 폐기되지 아니한다. 다만, 국회의원의 임기가 만료된 때에는 그러하지 아니하다. 국가는 건전한 소비행위를 계도하고 생산품의 품질향상을 촉구하기 위한 소비자보호운동을 법률이 정하는 바에 의하여 보장한다.
+원장은 국회의 동의를 얻어 대통령이 임명하고, 그 임기는 4년으로 하며, 1차에 한하여 중임할 수 있다. 대법원은 법률에 저촉되지 아니하는 범위안에서 소송에 관한 절차, 법원의 내부규율과 사무처리에 관한 규칙을 제정할 수 있다. 한 회계연도를 넘어 계속하여 지출할 필요가 있을 때에는 정부는 연한을 정하여 계속비로서 국회의 의결을 얻어야 한다.
+    </section>
+
+    <form action="">
+        <p>
+            <label for="">이름</label>
+            <input type="text">
+        </p>
+        <p>
+            <label for="">이메일</label>
+            <input type="text" placeholder="sample@mail.com" disabled>
+        </p>
+    </form>
+</body>
+</html>
